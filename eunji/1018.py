@@ -6,13 +6,13 @@ arr_correct_W = [['W','B','W','B','W','B','W','B'],['B','W','B','W','B','W','B',
 
 for i in range(N):
     line = input()
-    arr.append(list(line))
+    arr.append(list(line)) # list(str)은 문자열 str을 한 글자씩 배열에 넣어줌
 
 minimum = 2501
 
 for j in range(N-7):
     for k in range(M-7):
-        arr_new = [row[k:k+8] for row in arr[j:j+8]]
+        arr_new = [row[k:k+8] for row in arr[j:j+8]] # *****2중 array slicing 방법*****
         total_B = 0
         total_M = 0
         
@@ -25,7 +25,7 @@ for j in range(N-7):
             for o in range(8):
                 if arr_new[n][o] != arr_correct_W[n][o]:
                     total_M+=1
-                    
+
         if min(total_B,total_M)<=minimum:
             minimum = min(total_B,total_M)
             
