@@ -10,14 +10,8 @@ class Chess:
         self.op=[]
     
     def solve(self):
-        if self.w>8:
-            wid=self.w-8
-        else: #width는 최소 8
-            wid=0
-        if self.h>8:
-            hei=self.h-8
-        else: #height은 최소 8 
-            hei=0
+        wid=self.w-8
+        hei=self.h-8
         for x in range(wid+1):
             check=''
             switch_1=0
