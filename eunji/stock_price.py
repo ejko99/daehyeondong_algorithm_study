@@ -10,12 +10,10 @@ def solution(prices):
             if prices[j] < ele:
                 time = j-i
                 answer.append(time)
-                # print(answer)
                 break
             else:
                 if j ==len(prices)-1:
                     time = j-i
                     answer.append(time)
-                    # print(answer)
     answer.append(0)
     return answer
