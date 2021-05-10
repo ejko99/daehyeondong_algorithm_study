@@ -13,7 +13,7 @@ class Sort:
                 self.ca[a]+=1
                 if a>self.Max:
                     self.Max=a
-        self.ca=self.ca[:Max+1]
+        self.ca=self.ca[:self.Max+1]
         for i in range(len(self.ca)):
             if self.ca[i]==0:
                 continue #해당 숫자 i 는 정렬 항목에 없음 
