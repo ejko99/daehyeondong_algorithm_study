@@ -16,7 +16,6 @@ class NM:
             search_queue=deque()
             search_queue+=[str(i)]
             root=str(i)
-            ans=[]
             c=0
             while c<self.st:
                 person=search_queue.popleft()
