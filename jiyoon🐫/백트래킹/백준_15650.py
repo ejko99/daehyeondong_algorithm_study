@@ -9,7 +9,7 @@ class NM:
        for i in range(1,self.N+1):
            self.use+=str(i)
        
-    def honey(self): #BFS
+    def honey(self):
         for v in itertools.combinations(self.use,self.M):
             for l in range(len(v)):
                 if l==len(v)-1:
