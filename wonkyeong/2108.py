@@ -11,3 +11,5 @@ for i in range(n-1):
 print(int(sum(l)/n))
 print(l[int((n-1)/2)])
 print(l[-1]-l[0])
+print(l)
+
