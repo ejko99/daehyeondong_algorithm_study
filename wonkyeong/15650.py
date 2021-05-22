@@ -7,7 +7,7 @@ visited = [False for _ in range(m)]
 
 def backtracking(depth, n, m):
 
-    if depth == n:
+    if depth == n and ans == sorted(ans):
         print(" ".join(map(str, ans)))
         return
     
