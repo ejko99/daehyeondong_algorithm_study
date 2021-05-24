@@ -5,21 +5,21 @@ count = 0
 
 def promising(arr,i):
     flag = True
-    for j in range(i):
+    for j in range(1,i):
         if arr[j]==arr[i] or i-j == abs(arr[i]-arr[j]):
             flag = False
+            break
     return flag
-
 
 def nqueen(i):
     if promising(arr,i):
         if i==N:
-            count =+ 1
-            print(count)
+            global count
+            count += 1
         else:
-            for k in range(N):
+            for k in range(1,N+1):
                 arr[i+1] = k
-            nqueen(i+1)
+                nqueen(i+1)
 
 nqueen(0)
 print(count)
