@@ -1,4 +1,4 @@
-# 일반 backtracking algorithm
+# 개선된 backtracking algorithm
 
 import sys
 input = sys.stdin.readline
@@ -14,17 +14,16 @@ def promising(arr,i):
     for j in range(1,i):
         if arr[j]==arr[i] or i-j == abs(arr[i]-arr[j]):
             flag = False
-            break
     return flag
 
 def nqueen(i):
-    if promising(arr,i):
-        if i==N:
-            global count
-            count += 1
-        else:
-            for k in range(1,N+1):
-                arr[i+1] = k
+    for k in range(1,N+1):
+        arr[i+1] = k
+        if promising(arr,i+1):
+            if i+1==N:
+                global count
+                count += 1
+            else:
                 nqueen(i+1)
 
 nqueen(0)
