@@ -12,4 +12,3 @@ def backtracking(depth, n, m):
         ans.pop()
 
 backtracking(0, n, m)
-print(i)
