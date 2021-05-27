@@ -20,10 +20,9 @@ class FC:
             cur+=1
         
         for numb in self.x:
-            ans.append([self.z[numb],self.o[numb]])
+            print(self.z[numb],self.o[numb])
 
-        for a in ans:
-            print(a[0],a[1])
+       
 
 fc=FC()
 fc.read()
