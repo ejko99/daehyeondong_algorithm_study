@@ -34,9 +34,9 @@ for i in range(2,num+1):
             odd[j] = even[j-1]+even[j]
         print(odd)
     # how to get index?
-    # if num%2 == 0 and i== num-int(num/2):
-    #     for k in range(int(num/2)+2):
-    #         if (num-int(num/2))%2:
-    #             ans+=even[num-int(num/2)]
-    #         else:
-    #             ans+=odd[num-int(num/2)]
+    if num%2 == 0 and i== num-int(num/2):
+        for k in range(int(num/2)+2):
+            if (num-int(num/2))%2:
+                ans+=even[num-int(num/2)]
+            else:
+                ans+=odd[num-int(num/2)]
